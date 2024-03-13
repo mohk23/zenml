@@ -96,7 +96,7 @@ class ZenMLCloudSession:
                 raise UpgradeRequiredError(
                     "Subscription limit reached. Please "
                     "upgrade your subscription or "
-                    "reach out to us."
+                    "reach out to the ZenML team."
                 )
             else:
                 raise RuntimeError(
