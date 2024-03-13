@@ -76,8 +76,10 @@ def verify_permissions_and_create_entity(
                 f"Not allowed to create resource '{resource_type}' for a "
                 "different user."
             )
-    verify_permission(resource_type=resource_type, action=Action.CREATE)
-
+    verify_permission(
+        resource_type=resource_type,
+        action=Action.CREATE,
+    )
     is_gated_feature = True if resource_type in REPORTABLE_RESOURCES else False
     if is_gated_feature:
         check_entitlement(resource_type)
